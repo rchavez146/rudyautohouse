@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rudy Auto House | Full Inventory</title>
+  <meta name="description" content="Browse the full inventory at Rudy Auto House with filters for make, price, and availability." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">RAH</span>
+        <span class="brand-text">
+          <strong>Rudy Auto House</strong>
+          <small>Quality Pre-Owned Vehicles</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="inventory.html" aria-current="page">Full Inventory</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a class="btn btn-primary" href="tel:+15050123456">Call (505) 012-3456</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="inner-hero">
+      <div class="container">
+        <p class="eyebrow">Rudy Auto House</p>
+        <h1>Explore our full vehicle inventory</h1>
+        <p>Filter by make, price, and availability to find your next car, truck, or SUV.</p>
+        <div class="inner-hero-actions">
+          <a class="btn btn-ghost" href="index.html">Back to Home</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="inventory-section" id="inventory">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">All listings</p>
+          <h2>Complete inventory</h2>
+        </div>
+
+        <div class="filters" aria-label="Inventory filters">
+          <label>
+            Make
+            <select id="make-filter">
+              <option value="all">All makes</option>
+            </select>
+          </label>
+          <label>
+            Max Price
+            <select id="price-filter">
+              <option value="all">No limit</option>
+              <option value="15000">$15,000</option>
+              <option value="25000">$25,000</option>
+              <option value="35000">$35,000</option>
+              <option value="50000">$50,000</option>
+            </select>
+          </label>
+          <label>
+            Status
+            <select id="status-filter">
+              <option value="available">Available only</option>
+              <option value="all">All vehicles</option>
+            </select>
+          </label>
+        </div>
+
+        <div id="inventory-grid" class="inventory-grid" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Rudy Auto House. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
